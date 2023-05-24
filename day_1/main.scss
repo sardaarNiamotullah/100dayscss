@@ -1,0 +1,93 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: linear-gradient(to right top, rgb(77, 77, 197), rgb(104, 177, 245), rgb(194, 129, 255), rgb(187, 134, 247), rgb(222, 67, 243));
+  background-size: 500% 500%;
+  color: white;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  animation: bdrop 7s ease-in infinite;
+}
+
+.center {
+  .onetop {
+    background: rgba(white, 0.95);
+    width: 65px;
+    height: 20px;
+    border-radius: 2px;
+    position: absolute;
+    top: 100px;
+    left: 72px;
+    rotate: -35deg;
+    clip-path: polygon(0 0, 54% 0, 71% 100%, 0 100%);
+  }
+  .oneline {
+    background: rgba(white, 1);
+    width: 23px;
+    height: 110px;
+    border-radius: 2px;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    z-index: 2;
+    box-shadow: 4px 8px 16px rgba(black, 0.2);
+  }
+  .zero {
+    background: transparent;
+    box-sizing: border-box;
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 25px solid white;
+
+    &--1 {
+      top: 100px;
+      left: 115px;
+      z-index: 1;
+      box-shadow: 4px 8px 16px rgba(black, 0.2);
+    }
+    &--2 {
+      top: 100px;
+      left: 210px;
+    }
+  }
+  h1 {
+    position: absolute;
+    text-transform: uppercase;
+  }
+  .days {
+    top: 190px;
+    left: 93px;
+    font-size: 85px;
+  }
+  .css {
+    top: 280px;
+    left: 97px;
+    font-size: 27px;
+  }
+}
+
+@keyframes bdrop {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
