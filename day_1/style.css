@@ -22,6 +22,7 @@
   font-family: "Open Sans", Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: visible;
   animation: bdrop 7s ease-in infinite;
 }
 
@@ -91,6 +92,49 @@
   100% {
     background-position: 0% 50%;
   }
+}
+.contact {
+  position: absolute;
+  height: 50px;
+  width: 400px;
+  top: 100%;
+  background: transparent;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: end;
+}
+.contact__site {
+  background: black;
+  height: 25px;
+  width: 25px;
+  transition: all 0.2s;
+}
+.contact__site:hover {
+  transform: scale(1.2);
+}
+.contact__site--git {
+  -webkit-mask-image: url(./SVG/github.svg);
+  mask-image: url(./SVG/github.svg);
+  -webkit-mask-size: cover;
+  mask-size: cover;
+}
+.contact__site--in {
+  -webkit-mask-image: url(./SVG/linkedin.svg);
+  mask-image: url(./SVG/linkedin.svg);
+  -webkit-mask-size: cover;
+  mask-size: cover;
+}
+.contact__site--pen {
+  -webkit-mask-image: url(./SVG/codepen.svg);
+  mask-image: url(./SVG/codepen.svg);
+  -webkit-mask-size: cover;
+  mask-size: cover;
+}
+.contact__site--mail {
+  -webkit-mask-image: url(./SVG/mail.svg);
+  mask-image: url(./SVG/mail.svg);
+  -webkit-mask-size: cover;
+  mask-size: cover;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,186 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+$shadow: 0px 4px 16px rgba(black, 0.4);
+
+@mixin pseudoStyle {
+  content: "";
+  position: absolute;
+  height: 8px;
+  width: 80px;
+  border-radius: 50px;
+  background: white;
+  box-shadow: $shadow;
+  transform-origin: center;
+
+  transition-property: top, rotate;
+  transition-duration: 0.3s, 0.3s;
+  transition-delay: 0s, 0.3s;
+  transition-timing-function: ease-out, ease-out;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: linear-gradient(
+    to right top,
+    rgb(77, 77, 197),
+    rgb(104, 177, 245),
+    rgb(194, 129, 255),
+    rgb(187, 134, 247),
+    rgb(222, 67, 243)
+  );
+  background-size: 500% 500%;
+  animation: bdrop 7s ease-in infinite;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: visible;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+
+  &__checkbox {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    height: 100px;
+    width: 100px;
+    z-index: 10;
+    opacity: 0;
+  }
+
+  &__imgLine {
+    position: absolute;
+    background: white;
+    inset: 0;
+    margin: auto;
+    height: 8px;
+    width: 80px;
+    border-radius: 50px;
+    box-shadow: $shadow;
+
+    transition-property: height, width, opacity;
+    transition-duration: 0.3s, 0.3s, 0s;
+    transition-delay: 0s, 0s, 0.3s;
+    transition-timing-function: ease-out, ease-out, ease-out;
+  }
+
+  &__line {
+    position: absolute;
+    background: transparent;
+    top: 146px;
+    left: 110px;
+    height: 8px;
+    width: 80px;
+    border-radius: 50px;
+    box-shadow: none;
+
+    &::before {
+      top: -22px;
+      z-index: 3;
+      @include pseudoStyle();
+    }
+    &::after {
+      top: 22px;
+      @include pseudoStyle();
+    }
+  }
+
+  &__checkbox:checked ~ &__imgLine {
+    opacity: 0;
+    height: 5px;
+    width: 40px;
+  }
+  &__checkbox:checked + &__line::before {
+    top: 0;
+    rotate: 135deg;
+  }
+  &__checkbox:checked + &__line::after {
+    top: 0;
+    rotate: 45deg;
+  }
+
+  &__checkbox:not(:checked) + &__line::before {
+    transition-delay: 0.3s, 0s;
+  }
+  &__checkbox:not(:checked) + &__line::after {
+    transition-delay: 0.3s, 0s;
+  }
+}
+
+@keyframes bdrop {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.contact {
+  position: absolute;
+  height: 50px;
+  width: 400px;
+  top: 100%;
+  background: transparent;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: end;
+
+  &__site {
+    background: black;
+    height: 25px;
+    width: 25px;
+    transition: all .2s;
+
+    &:hover {transform: scale(1.2);}
+
+    &--git {
+      -webkit-mask-image: url(./SVG/github.svg);
+      mask-image: url(./SVG/github.svg);
+      -webkit-mask-size: cover;
+      mask-size: cover;
+    }
+    &--in {
+      -webkit-mask-image: url(./SVG/linkedin.svg);
+      mask-image: url(./SVG/linkedin.svg);
+      -webkit-mask-size: cover;
+      mask-size: cover;
+    }
+    &--pen {
+      -webkit-mask-image: url(./SVG/codepen.svg);
+      mask-image: url(./SVG/codepen.svg);
+      -webkit-mask-size: cover;
+      mask-size: cover;
+    }
+    &--mail {
+      -webkit-mask-image: url(./SVG/mail.svg);
+      mask-image: url(./SVG/mail.svg);
+      -webkit-mask-size: cover;
+      mask-size: cover;
+    }
+  }
+}
