@@ -1,0 +1,191 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+$whiteC: rgb(255, 255, 255);
+$midC: rgb(201, 201, 201);
+$offwhite: rgb(175, 175, 175);
+
+@keyframes sun {
+    0%{ transform: translate(-50%, -50%) rotate(45deg); }
+    90%{ transform: translate(-50%, -50%) rotate(225deg); }
+    100%{ transform: translate(-50%, -50%) rotate(225deg); }
+}
+@keyframes daylight {
+    0% {opacity: 0;}
+    23% {opacity: 1;}
+    45% {opacity: 1;}
+    65% {opacity: 1;}
+    90% {opacity: 0;}
+    100% {opacity: 0;}
+}
+@mixin pyramid {
+    position: absolute;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 70px;
+    width: 180px;
+    background-color: white;
+}
+@keyframes py_1 {
+    0%{background: $offwhite;}
+    10%{background: $midC;}
+    55%{background: $whiteC;}
+    80%{background: $midC;}
+    100%{background: $offwhite;}
+}
+@keyframes py_2 {
+    0%{background: $offwhite;}
+    10%{background: $midC;}
+    55%{background: $midC;}
+    90%{background: $whiteC;}
+    100%{background: $whiteC;}
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.contact {
+    position: absolute;
+    height: 50px;
+    width: 400px;
+    top: 100%;
+    background: transparent;
+  
+    display: flex;
+    justify-content: space-evenly;
+    align-items: end;
+  
+    &__site {
+      background: rgb(0, 0, 0);
+      height: 25px;
+      width: 25px;
+      transition: all .2s;
+  
+      &:hover {transform: scale(1.2);}
+  
+      &--git {
+        -webkit-mask-image: url(./SVG/github.svg);
+        mask-image: url(./SVG/github.svg);
+        -webkit-mask-size: cover;
+        mask-size: cover;
+      }
+      &--in {
+        -webkit-mask-image: url(./SVG/linkedin.svg);
+        mask-image: url(./SVG/linkedin.svg);
+        -webkit-mask-size: cover;
+        mask-size: cover;
+      }
+      &--pen {
+        -webkit-mask-image: url(./SVG/codepen.svg);
+        mask-image: url(./SVG/codepen.svg);
+        -webkit-mask-size: cover;
+        mask-size: cover;
+      }
+      &--mail {
+        -webkit-mask-image: url(./SVG/mail.svg);
+        mask-image: url(./SVG/mail.svg);
+        -webkit-mask-size: cover;
+        mask-size: cover;
+      }
+    }
+}
+
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 5px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #28282B;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: visible;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(to bottom, rgb(71, 217, 236) 70%, rgb(231, 231, 117) 70%);
+  border-radius: 50%;
+  overflow: hidden;
+
+  animation: daylight 4s ease-in-out infinite;
+
+  &__sunContainer {
+    position: absolute;
+    top: 82%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 195px;
+    height: 195px;
+    background: transparent;
+
+    animation: sun 4s cubic-bezier(.32,.77,.42,-0.17) infinite;
+
+    &--sun {
+        position: absolute;
+        top: 100%;
+        left: 0%;
+        transform: translate(-50%, -50%);
+        width: 33px;
+        height: 33px;
+        background: yellow;
+        border-radius: 50%;
+    }
+  }
+
+  &__pyramidContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 80px;
+    width: 80px;
+    background: transparent;
+    transform: translate(-50%, -50%);
+    &--pyramid_1 {
+        @include pyramid();
+        clip-path: polygon(54% 13%, 14% 100%, 65% 100%);
+
+        animation: py_1 4s ease-in-out infinite;
+    }
+    &--pyramid_2 {
+        @include pyramid();
+        clip-path: polygon(54% 13%, 62% 100%, 92% 100%);
+        animation: py_2 4s ease-in-out infinite;
+    }
+    &--shadow {
+        position: absolute;
+        top: 144%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 70px;
+        width: 180px;
+        background-color: rgba(0, 0, 0, 0.225);
+        clip-path: polygon(92% 0%, 14% 0, 190% 20%);
+
+        animation: shadowM 4s ease-out infinite;
+    }
+  }
+}
+
+@keyframes shadowM {
+    0%{}
+    20%{clip-path: polygon(92% 0%, 14% 0, 130% 60%);}
+    40%{clip-path: polygon(92% 0%, 14% 0, 130% 60%);}
+    60%{clip-path: polygon(92% 0%, 14% 0, 80% 30%);}
+    80%{clip-path: polygon(92% 0%, 14% 0, 30% 50%);}
+    90%{clip-path: polygon(92% 0%, 14% 0, -100% 30%);}
+    100%{clip-path: polygon(92% 0%, 14% 0, -190% 20%);}
+}
