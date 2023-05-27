@@ -27,14 +27,14 @@ $offwhite: rgb(175, 175, 175);
     background-color: white;
 }
 @keyframes py_1 {
-    0%{background: $offwhite;}
+    0%{background: $midC;}
     10%{background: $midC;}
     55%{background: $whiteC;}
     80%{background: $midC;}
     100%{background: $offwhite;}
 }
 @keyframes py_2 {
-    0%{background: $offwhite;}
+    0%{background: rgb(165, 165, 165);}
     10%{background: $midC;}
     55%{background: $midC;}
     90%{background: $whiteC;}
@@ -64,26 +64,26 @@ $offwhite: rgb(175, 175, 175);
       &:hover {transform: scale(1.2);}
   
       &--git {
-        -webkit-mask-image: url(./SVG/github.svg);
-        mask-image: url(./SVG/github.svg);
+        -webkit-mask-image: url(../SVG/github.svg);
+        mask-image: url(../SVG/github.svg);
         -webkit-mask-size: cover;
         mask-size: cover;
       }
       &--in {
-        -webkit-mask-image: url(./SVG/linkedin.svg);
-        mask-image: url(./SVG/linkedin.svg);
+        -webkit-mask-image: url(../SVG/linkedin.svg);
+        mask-image: url(../SVG/linkedin.svg);
         -webkit-mask-size: cover;
         mask-size: cover;
       }
       &--pen {
-        -webkit-mask-image: url(./SVG/codepen.svg);
-        mask-image: url(./SVG/codepen.svg);
+        -webkit-mask-image: url(../SVG/codepen.svg);
+        mask-image: url(../SVG/codepen.svg);
         -webkit-mask-size: cover;
         mask-size: cover;
       }
       &--mail {
-        -webkit-mask-image: url(./SVG/mail.svg);
-        mask-image: url(./SVG/mail.svg);
+        -webkit-mask-image: url(../SVG/mail.svg);
+        mask-image: url(../SVG/mail.svg);
         -webkit-mask-size: cover;
         mask-size: cover;
       }
