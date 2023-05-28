@@ -24,26 +24,26 @@
   transform: scale(1.2);
 }
 .contact__site--git {
-  -webkit-mask-image: url(./SVG/github.svg);
-  mask-image: url(./SVG/github.svg);
+  -webkit-mask-image: url(../SVG/github.svg);
+  mask-image: url(../SVG/github.svg);
   -webkit-mask-size: cover;
   mask-size: cover;
 }
 .contact__site--in {
-  -webkit-mask-image: url(./SVG/linkedin.svg);
-  mask-image: url(./SVG/linkedin.svg);
+  -webkit-mask-image: url(../SVG/linkedin.svg);
+  mask-image: url(../SVG/linkedin.svg);
   -webkit-mask-size: cover;
   mask-size: cover;
 }
 .contact__site--pen {
-  -webkit-mask-image: url(./SVG/codepen.svg);
-  mask-image: url(./SVG/codepen.svg);
+  -webkit-mask-image: url(../SVG/codepen.svg);
+  mask-image: url(../SVG/codepen.svg);
   -webkit-mask-size: cover;
   mask-size: cover;
 }
 .contact__site--mail {
-  -webkit-mask-image: url(./SVG/mail.svg);
-  mask-image: url(./SVG/mail.svg);
+  -webkit-mask-image: url(../SVG/mail.svg);
+  mask-image: url(../SVG/mail.svg);
   -webkit-mask-size: cover;
   mask-size: cover;
 }

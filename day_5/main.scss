@@ -1,0 +1,471 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+@mixin afterEffect {
+  text-align: center;
+  padding-top: 3px;
+  color: white;
+  display: block;
+  position: absolute;
+  top: -100%;
+  left: 62%;
+  transform: translate(-50%, -50%);
+  border-radius: 2px;
+  opacity: 0;
+  width: 30px;
+  height: 25px;
+  font-size: 10px;
+  font-weight: bold;
+
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 75%,
+    60% 81%,
+    49% 100%,
+    37% 80%,
+    0% 75%
+  );
+  transition: all 0.3s;
+}
+.contact {
+  position: absolute;
+  height: 50px;
+  width: 400px;
+  top: 100%;
+  background: transparent;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: end;
+
+  &__site {
+    background: rgb(0, 0, 0);
+    height: 25px;
+    width: 25px;
+    transition: all 0.2s;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    &--git {
+      -webkit-mask-image: url(../SVG/github.svg);
+      mask-image: url(../SVG/github.svg);
+      -webkit-mask-size: cover;
+      mask-size: cover;
+    }
+    &--in {
+      -webkit-mask-image: url(../SVG/linkedin.svg);
+      mask-image: url(../SVG/linkedin.svg);
+      -webkit-mask-size: cover;
+      mask-size: cover;
+    }
+    &--pen {
+      -webkit-mask-image: url(../SVG/codepen.svg);
+      mask-image: url(../SVG/codepen.svg);
+      -webkit-mask-size: cover;
+      mask-size: cover;
+    }
+    &--mail {
+      -webkit-mask-image: url(../SVG/mail.svg);
+      mask-image: url(../SVG/mail.svg);
+      -webkit-mask-size: cover;
+      mask-size: cover;
+    }
+  }
+}
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 5px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #3589af;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: visible;
+}
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  box-shadow: 0px 4px 16px 10px rgba(0, 0, 0, 0.15);
+  background: white;
+  border-radius: 5px;
+  overflow: hidden;
+
+  &__headingContainer {
+    background: rgb(230, 172, 86);
+    height: 60px;
+    color: white;
+
+    display: grid;
+    grid-template-columns: 150px 100px;
+
+    align-content: center;
+    justify-content: space-between;
+
+    .heading {
+      order: 0;
+      place-self: center flex-start;
+      padding-left: 15px;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 14px;
+    }
+    .date {
+      order: 2;
+      place-self: center flex-start;
+      padding-left: 15px;
+      font-size: 10px;
+    }
+    .revenue {
+      order: 1;
+      place-self: center flex-end;
+      padding-right: 15px;
+      font-size: 10px;
+    }
+    .earning {
+      order: 3;
+      place-self: center flex-end;
+      padding-right: 15px;
+      font-weight: 600;
+      font-size: 14px;
+    }
+  }
+  &__list {
+    list-style: none;
+    display: flex;
+    height: 20px;
+    justify-content: right;
+    align-items: flex-end;
+    font-size: 9px;
+
+    li {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        height: 3px;
+        width: 10px;
+        left: -25px;
+        top: 47%;
+        border-radius: 10px;
+      }
+    }
+    .views {
+      margin-right: 60px;
+      &::before {
+        background: #cf4b89;
+      }
+    }
+    .purchases {
+      margin-right: 15px;
+      &::before {
+        background: #3589af;
+      }
+    }
+  }
+  &__weekContainer {
+    margin: 0 7px;
+    padding-bottom: 10px;
+    height: 110px;
+    font-size: 9px;
+    color: gray;
+    text-transform: uppercase;
+    position: relative;
+
+    display: grid;
+    align-content: flex-end;
+    place-items: center;
+    grid-template-columns: repeat(7, 1fr);
+
+    &--graph {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 95%;
+      height: 100%;
+
+      &-line {
+        position: absolute;
+        left: 0;
+        height: 0.1px;
+        width: 100%;
+        background: rgba(gray, 0.2);
+        &1 {
+          top: 0%;
+        }
+        &2 {
+          top: 38%;
+        }
+        &3 {
+          top: 73%;
+        }
+      }
+
+      &-dot {
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        cursor: pointer;
+
+        &Read {
+          background: #cf4b89;
+          &_1 {
+            top: 40%;
+
+            &::after {
+              @include afterEffect();
+              content: "443";
+              background: #cf4b89;
+            }
+
+            &:hover::after, &:active::after {
+              opacity: 1;
+              top: -300%;
+            }
+          }
+          &_2 {
+            top: 20%;
+
+            &::after {
+              @include afterEffect();
+              content: "513";
+              background: #cf4b89;
+            }
+
+            &:hover::after, &:active::after {
+              opacity: 1;
+              top: -300%;
+            }
+          }
+          &_3 {
+            top: 7%;
+
+            &::after {
+              @include afterEffect();
+              content: "550";
+              background: #cf4b89;
+            }
+
+            &:hover::after, &:active::after {
+              opacity: 1;
+              top: -300%;
+            }
+          }
+          &_4 {
+            top: 15%;
+
+            &::after {
+              @include afterEffect();
+              content: "520";
+              background: #cf4b89;
+            }
+
+            &:hover::after, &:active::after {
+              opacity: 1;
+              top: -300%;
+            }
+          }
+          &_5 {
+            top: 30%;
+
+            &::after {
+              @include afterEffect();
+              content: "480";
+              background: #cf4b89;
+            }
+
+            &:hover::after, &:active::after {
+              opacity: 1;
+              top: -300%;
+            }
+          }
+          &_6 {
+            top: 35%;
+
+            &::after {
+              @include afterEffect();
+              content: "450";
+              background: #cf4b89;
+            }
+
+            &:hover::after, &:active::after {
+              opacity: 1;
+              top: -300%;
+            }
+          }
+          &_7 {
+            top: 25%;
+
+            &::after {
+              @include afterEffect();
+              content: "485";
+              background: #cf4b89;
+            }
+
+            &:hover::after, &:active::after {
+              opacity: 1;
+              top: -300%;
+            }
+          }
+        }
+        &Blue {
+          background: #3589af;
+          &_1 {
+            top: 60%;
+
+            &::after {
+              @include afterEffect();
+              content: "20";
+              background: #3589af;
+            }
+
+            &:hover::after, &:active::after {
+              opacity: 1;
+              top: -300%;
+            }
+          }
+          &_2 {
+            top: 55%;
+
+            &::after {
+              @include afterEffect();
+              content: "23";
+              background: #3589af;
+            }
+
+            &:hover::after, &:active::after {
+              opacity: 1;
+              top: -300%;
+            }
+          }
+          &_3 {
+            top: 40%;
+
+            &::after {
+              @include afterEffect();
+              content: "47";
+              background: #3589af;
+            }
+
+            &:hover::after, &:active::after {
+              opacity: 1;
+              top: -300%;
+            }
+          }
+          &_4 {
+            top: 50%;
+
+            &::after {
+              @include afterEffect();
+              content: "35";
+              background: #3589af;
+            }
+
+            &:hover::after, &:active::after {
+              opacity: 1;
+              top: -300%;
+            }
+          }
+          &_5 {
+            top: 45%;
+
+            &::after {
+              @include afterEffect();
+              content: "40";
+              background: #3589af;
+            }
+
+            &:hover::after, &:active::after {
+              opacity: 1;
+              top: -300%;
+            }
+          }
+          &_6 {
+            top: 63%;
+
+            &::after {
+              @include afterEffect();
+              content: "20";
+              background: #3589af;
+            }
+
+            &:hover::after, &:active::after {
+              opacity: 1;
+              top: -300%;
+            }
+          }
+          &_7 {
+            top: 53%;
+
+            &::after {
+              @include afterEffect();
+              content: "33";
+              background: #3589af;
+            }
+
+            &:hover::after, &:active::after {
+              opacity: 1;
+              top: -300%;
+            }
+          }
+        }
+        &MON {
+          left: 4%;
+        }
+        &TUE {
+          left: 19%;
+        }
+        &WED {
+          left: 34%;
+        }
+        &THU {
+          left: 48%;
+        }
+        &FRI {
+          left: 63%;
+        }
+        &SAT {
+          left: 79%;
+        }
+        &SUN {
+          left: 94%;
+        }
+      }
+
+      svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+
+        .lineSetV {
+            stroke: #cf4b89;
+            stroke-width: 2;
+        }
+        .lineSetR {
+            stroke: #3589af;
+            stroke-width: 2;
+        }
+      }
+    }
+    &--week {
+    }
+  }
+}
