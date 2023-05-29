@@ -201,17 +201,20 @@
   left: 62%;
   transform: translate(-50%, -50%);
   border-radius: 2px;
+  visibility: hidden;
   opacity: 0;
   width: 30px;
   height: 25px;
   font-size: 10px;
   font-weight: bold;
+  cursor: default;
   clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 60% 81%, 49% 100%, 37% 80%, 0% 75%);
   transition: all 0.3s;
   content: "443";
   background: #cf4b89;
 }
 .center__weekContainer--graph-dotRead_1:hover::after, .center__weekContainer--graph-dotRead_1:active::after {
+  visibility: visible;
   opacity: 1;
   top: -300%;
 }
@@ -228,17 +231,20 @@
   left: 62%;
   transform: translate(-50%, -50%);
   border-radius: 2px;
+  visibility: hidden;
   opacity: 0;
   width: 30px;
   height: 25px;
   font-size: 10px;
   font-weight: bold;
+  cursor: default;
   clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 60% 81%, 49% 100%, 37% 80%, 0% 75%);
   transition: all 0.3s;
   content: "513";
   background: #cf4b89;
 }
 .center__weekContainer--graph-dotRead_2:hover::after, .center__weekContainer--graph-dotRead_2:active::after {
+  visibility: visible;
   opacity: 1;
   top: -300%;
 }
@@ -255,17 +261,20 @@
   left: 62%;
   transform: translate(-50%, -50%);
   border-radius: 2px;
+  visibility: hidden;
   opacity: 0;
   width: 30px;
   height: 25px;
   font-size: 10px;
   font-weight: bold;
+  cursor: default;
   clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 60% 81%, 49% 100%, 37% 80%, 0% 75%);
   transition: all 0.3s;
   content: "550";
   background: #cf4b89;
 }
 .center__weekContainer--graph-dotRead_3:hover::after, .center__weekContainer--graph-dotRead_3:active::after {
+  visibility: visible;
   opacity: 1;
   top: -300%;
 }
@@ -282,17 +291,20 @@
   left: 62%;
   transform: translate(-50%, -50%);
   border-radius: 2px;
+  visibility: hidden;
   opacity: 0;
   width: 30px;
   height: 25px;
   font-size: 10px;
   font-weight: bold;
+  cursor: default;
   clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 60% 81%, 49% 100%, 37% 80%, 0% 75%);
   transition: all 0.3s;
   content: "520";
   background: #cf4b89;
 }
 .center__weekContainer--graph-dotRead_4:hover::after, .center__weekContainer--graph-dotRead_4:active::after {
+  visibility: visible;
   opacity: 1;
   top: -300%;
 }
@@ -309,17 +321,20 @@
   left: 62%;
   transform: translate(-50%, -50%);
   border-radius: 2px;
+  visibility: hidden;
   opacity: 0;
   width: 30px;
   height: 25px;
   font-size: 10px;
   font-weight: bold;
+  cursor: default;
   clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 60% 81%, 49% 100%, 37% 80%, 0% 75%);
   transition: all 0.3s;
   content: "480";
   background: #cf4b89;
 }
 .center__weekContainer--graph-dotRead_5:hover::after, .center__weekContainer--graph-dotRead_5:active::after {
+  visibility: visible;
   opacity: 1;
   top: -300%;
 }
@@ -336,17 +351,20 @@
   left: 62%;
   transform: translate(-50%, -50%);
   border-radius: 2px;
+  visibility: hidden;
   opacity: 0;
   width: 30px;
   height: 25px;
   font-size: 10px;
   font-weight: bold;
+  cursor: default;
   clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 60% 81%, 49% 100%, 37% 80%, 0% 75%);
   transition: all 0.3s;
   content: "450";
   background: #cf4b89;
 }
 .center__weekContainer--graph-dotRead_6:hover::after, .center__weekContainer--graph-dotRead_6:active::after {
+  visibility: visible;
   opacity: 1;
   top: -300%;
 }
@@ -363,17 +381,20 @@
   left: 62%;
   transform: translate(-50%, -50%);
   border-radius: 2px;
+  visibility: hidden;
   opacity: 0;
   width: 30px;
   height: 25px;
   font-size: 10px;
   font-weight: bold;
+  cursor: default;
   clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 60% 81%, 49% 100%, 37% 80%, 0% 75%);
   transition: all 0.3s;
   content: "485";
   background: #cf4b89;
 }
 .center__weekContainer--graph-dotRead_7:hover::after, .center__weekContainer--graph-dotRead_7:active::after {
+  visibility: visible;
   opacity: 1;
   top: -300%;
 }
@@ -393,17 +414,20 @@
   left: 62%;
   transform: translate(-50%, -50%);
   border-radius: 2px;
+  visibility: hidden;
   opacity: 0;
   width: 30px;
   height: 25px;
   font-size: 10px;
   font-weight: bold;
+  cursor: default;
   clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 60% 81%, 49% 100%, 37% 80%, 0% 75%);
   transition: all 0.3s;
   content: "20";
   background: #3589af;
 }
 .center__weekContainer--graph-dotBlue_1:hover::after, .center__weekContainer--graph-dotBlue_1:active::after {
+  visibility: visible;
   opacity: 1;
   top: -300%;
 }
@@ -420,17 +444,20 @@
   left: 62%;
   transform: translate(-50%, -50%);
   border-radius: 2px;
+  visibility: hidden;
   opacity: 0;
   width: 30px;
   height: 25px;
   font-size: 10px;
   font-weight: bold;
+  cursor: default;
   clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 60% 81%, 49% 100%, 37% 80%, 0% 75%);
   transition: all 0.3s;
   content: "23";
   background: #3589af;
 }
 .center__weekContainer--graph-dotBlue_2:hover::after, .center__weekContainer--graph-dotBlue_2:active::after {
+  visibility: visible;
   opacity: 1;
   top: -300%;
 }
@@ -447,17 +474,20 @@
   left: 62%;
   transform: translate(-50%, -50%);
   border-radius: 2px;
+  visibility: hidden;
   opacity: 0;
   width: 30px;
   height: 25px;
   font-size: 10px;
   font-weight: bold;
+  cursor: default;
   clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 60% 81%, 49% 100%, 37% 80%, 0% 75%);
   transition: all 0.3s;
   content: "47";
   background: #3589af;
 }
 .center__weekContainer--graph-dotBlue_3:hover::after, .center__weekContainer--graph-dotBlue_3:active::after {
+  visibility: visible;
   opacity: 1;
   top: -300%;
 }
@@ -474,17 +504,20 @@
   left: 62%;
   transform: translate(-50%, -50%);
   border-radius: 2px;
+  visibility: hidden;
   opacity: 0;
   width: 30px;
   height: 25px;
   font-size: 10px;
   font-weight: bold;
+  cursor: default;
   clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 60% 81%, 49% 100%, 37% 80%, 0% 75%);
   transition: all 0.3s;
   content: "35";
   background: #3589af;
 }
 .center__weekContainer--graph-dotBlue_4:hover::after, .center__weekContainer--graph-dotBlue_4:active::after {
+  visibility: visible;
   opacity: 1;
   top: -300%;
 }
@@ -501,17 +534,20 @@
   left: 62%;
   transform: translate(-50%, -50%);
   border-radius: 2px;
+  visibility: hidden;
   opacity: 0;
   width: 30px;
   height: 25px;
   font-size: 10px;
   font-weight: bold;
+  cursor: default;
   clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 60% 81%, 49% 100%, 37% 80%, 0% 75%);
   transition: all 0.3s;
   content: "40";
   background: #3589af;
 }
 .center__weekContainer--graph-dotBlue_5:hover::after, .center__weekContainer--graph-dotBlue_5:active::after {
+  visibility: visible;
   opacity: 1;
   top: -300%;
 }
@@ -528,17 +564,20 @@
   left: 62%;
   transform: translate(-50%, -50%);
   border-radius: 2px;
+  visibility: hidden;
   opacity: 0;
   width: 30px;
   height: 25px;
   font-size: 10px;
   font-weight: bold;
+  cursor: default;
   clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 60% 81%, 49% 100%, 37% 80%, 0% 75%);
   transition: all 0.3s;
   content: "20";
   background: #3589af;
 }
 .center__weekContainer--graph-dotBlue_6:hover::after, .center__weekContainer--graph-dotBlue_6:active::after {
+  visibility: visible;
   opacity: 1;
   top: -300%;
 }
@@ -555,17 +594,20 @@
   left: 62%;
   transform: translate(-50%, -50%);
   border-radius: 2px;
+  visibility: hidden;
   opacity: 0;
   width: 30px;
   height: 25px;
   font-size: 10px;
   font-weight: bold;
+  cursor: default;
   clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 60% 81%, 49% 100%, 37% 80%, 0% 75%);
   transition: all 0.3s;
   content: "33";
   background: #3589af;
 }
 .center__weekContainer--graph-dotBlue_7:hover::after, .center__weekContainer--graph-dotBlue_7:active::after {
+  visibility: visible;
   opacity: 1;
   top: -300%;
 }

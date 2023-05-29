@@ -1,0 +1,240 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+.center__profile__idbox--picname .picbox__b2, .center__profile__idbox--picname .picbox__b1 {
+  background: transparent;
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #a56a33;
+  transition: all 2s cubic-bezier(0.9, 0.58, 0.06, 0.92);
+}
+
+@keyframes bdrop {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.contact {
+  position: absolute;
+  height: 50px;
+  width: 400px;
+  top: 100%;
+  background: transparent;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: end;
+}
+.contact__site {
+  background: black;
+  height: 25px;
+  width: 25px;
+  transition: all 0.2s;
+}
+.contact__site:hover {
+  transform: scale(1.2);
+}
+.contact__site--git {
+  -webkit-mask-image: url(../SVG/github.svg);
+  mask-image: url(../SVG/github.svg);
+  -webkit-mask-size: cover;
+  mask-size: cover;
+}
+.contact__site--in {
+  -webkit-mask-image: url(../SVG/linkedin.svg);
+  mask-image: url(../SVG/linkedin.svg);
+  -webkit-mask-size: cover;
+  mask-size: cover;
+}
+.contact__site--pen {
+  -webkit-mask-image: url(../SVG/codepen.svg);
+  mask-image: url(../SVG/codepen.svg);
+  -webkit-mask-size: cover;
+  mask-size: cover;
+}
+.contact__site--mail {
+  -webkit-mask-image: url(../SVG/mail.svg);
+  mask-image: url(../SVG/mail.svg);
+  -webkit-mask-size: cover;
+  mask-size: cover;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 5px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: linear-gradient(to top right, #b18155, #ee994a);
+  background-size: 500% 500%;
+  color: #a56a33;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: visible;
+  animation: bdrop 5s ease-in infinite;
+}
+
+.center {
+  height: 315px;
+  width: 80%;
+  border-radius: 5px;
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  overflow: hidden;
+  box-shadow: 0 4px 16px 12px rgba(0, 0, 0, 0.1);
+}
+.center__profile {
+  background: black;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-template-rows: repeat(3, 105px);
+  gap: 2px;
+}
+.center__profile__idbox {
+  grid-column: 1/2;
+  grid-row: 1/-1;
+  background: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.center__profile__idbox--picname {
+  position: relative;
+  height: 60%;
+  width: 100%;
+}
+.center__profile__idbox--picname .picbox {
+  position: absolute;
+  left: 50%;
+  top: 15%;
+  transform: translateX(-50%);
+}
+.center__profile__idbox--picname .picbox img {
+  display: block;
+  inset: 0;
+  margin: auto;
+  height: 90px;
+  width: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  cursor: pointer;
+}
+@media only screen and (min-width: 700px) {
+  .center__profile__idbox--picname .picbox img:hover ~ .picbox__b1 {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+  .center__profile__idbox--picname .picbox img:hover ~ .picbox__b2 {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+.center__profile__idbox--picname .picbox__b1 {
+  height: 110px;
+  width: 110px;
+  border-top: none;
+  border-left: none;
+}
+@media only screen and (max-width: 700px) {
+  .center__profile__idbox--picname .picbox__b1 {
+    animation: rott 3s ease infinite;
+  }
+}
+.center__profile__idbox--picname .picbox__b2 {
+  height: 100px;
+  width: 100px;
+  border-bottom: none;
+  border-right: none;
+}
+@media only screen and (max-width: 700px) {
+  .center__profile__idbox--picname .picbox__b2 {
+    animation: rott 3s ease infinite reverse;
+  }
+}
+.center__profile__idbox--picname .name {
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  cursor: text;
+}
+.center__profile__idbox--picname .profession {
+  position: absolute;
+  bottom: 7%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 10px;
+  font-weight: 400;
+  cursor: text;
+}
+.center__profile__idbox--contact ul {
+  list-style: none;
+  padding-bottom: 40px;
+}
+.center__profile__idbox--contact ul li {
+  cursor: pointer;
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  width: 110px;
+  height: 30px;
+  border-radius: 50px;
+  text-align: center;
+  padding-top: 5px;
+  border: 1px solid currentColor;
+  transition: all 0.3s;
+}
+.center__profile__idbox--contact ul li:hover {
+  color: black;
+  background: #a56a33;
+}
+.center__profile .count {
+  text-align: center;
+  padding-top: 25%;
+  background: #141414;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.center__profile .count p:first-child {
+  font-size: 20px;
+  font-weight: 600;
+}
+.center__profile .count p:last-child {
+  font-size: 10px;
+}
+.center__profile .count:hover {
+  background: black;
+}
+
+#follow {
+  margin-bottom: 10px;
+}
+
+@keyframes rott {
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
